@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Father's Day - Best Father's Day Gift Ideas & DIY Cards</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍👧‍👦</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍👧‍👦</text></svg>">
+    <meta name="description" content="Discover amazing father's day gift ideas, DIY greeting cards, delicious food recipes, and creative presents to make your dad feel special. Find the perfect father's day gift now!">
+    <meta name="keywords" content="father's day gift, father's day gift ideas, happy father's day, fathers day presents, DIY father's day cards, father's day food ideas, gifts for dad">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Father's Day Gift Ideas",
+        "description": "Discover amazing father's day gift ideas, DIY greeting cards, delicious food recipes, and creative presents to make your dad feel special.",
+        "url": "http://localhost:3000",
+        "keywords": ["father's day gift", "father's day gift ideas", "happy father's day", "DIY cards", "father's day recipes"],
+        "author": {
+            "@type": "Organization",
+            "name": "Father's Day Gift Guide"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1><i class="fas fa-heart"></i> Happy Father's Day - Ultimate Gift Guide</h1>
+            <p>Discover the perfect father's day gift ideas to show your dad how much you care. From DIY cards to amazing presents, make this father's day unforgettable!</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="container">
+            <button class="nav-btn active" data-section="cards">
+                <i class="fas fa-envelope"></i>
+                <span>Greeting Cards</span>
+            </button>
+            <button class="nav-btn" data-section="food">
+                <i class="fas fa-utensils"></i>
+                <span>Food Ideas</span>
+            </button>
+            <button class="nav-btn" data-section="gifts">
+                <i class="fas fa-gift"></i>
+                <span>Random Gifts</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- 贺卡设计板块 -->
+            <section id="cards" class="section active">
+                <h2><i class="fas fa-palette"></i> DIY Father's Day Card Ideas & Designs</h2>
+                <div class="section-intro">
+                    <p>Create heartfelt father's day cards that dad will treasure forever! These creative father's day gift ideas will help you craft the perfect handmade card to express your love and appreciation.</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-design">
+                        <div class="card-preview classic">
+                            <div class="card-content">
+                                <h3>Classic Dad</h3>
+                                <p>"World's Best Dad"</p>
+                            </div>
+                        </div>
+                        <div class="design-info">
+                            <h4>Classic Design</h4>
+                            <p>Traditional style with elegant typography and warm colors</p>
+                            <button class="btn-secondary" onclick="generateCardIdea('classic')">Get Design Tips</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card-design">
+                        <div class="card-preview photo">
+                            <div class="card-content">
+                                <h3>Photo Memory</h3>
+                                <p>"Our Favorite Moments"</p>
+                            </div>
+                        </div>
+                        <div class="design-info">
+                            <h4>Photo Collage</h4>
+                            <p>Personalized with family photos and memories</p>
+                            <button class="btn-secondary" onclick="generateCardIdea('photo')">Get Design Tips</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card-design">
+                        <div class="card-preview funny">
+                            <div class="card-content">
+                                <h3>Dad Jokes</h3>
+                                <p>"Thanks for the Puns!"</p>
+                            </div>
+                        </div>
+                        <div class="design-info">
+                            <h4>Humorous Theme</h4>
+                            <p>Fun and playful with dad jokes and puns</p>
+                            <button class="btn-secondary" onclick="generateCardIdea('funny')">Get Design Tips</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card-design">
+                        <div class="card-preview handmade">
+                            <div class="card-content">
+                                <h3>Handcrafted</h3>
+                                <p>"Made with Love"</p>
+                            </div>
+                        </div>
+                        <div class="design-info">
+                            <h4>DIY Crafted</h4>
+                            <p>Simple materials, maximum heart</p>
+                            <button class="btn-secondary" onclick="generateCardIdea('handmade')">Get Design Tips</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-idea-output" id="cardIdea">
+                    <h3>Father's Day Card Design Inspiration</h3>
+                    <p>Click on any design above to get detailed tips and ideas for your perfect father's day gift!</p>
+                </div>
+                
+                <!-- 添加视频教程和资源链接 -->
+                <div class="tutorial-section">
+                    <h3><i class="fas fa-video"></i> Video Tutorials & Resources</h3>
+                    <div class="tutorial-grid">
+                        <div class="tutorial-card">
+                            <h4>DIY Father's Day Cards</h4>
+                            <p>Step-by-step video tutorials for creating amazing father's day cards</p>
+                            <a href="https://www.youtube.com/results?search_query=DIY+fathers+day+cards+tutorial" target="_blank" class="tutorial-link">
+                                <i class="fab fa-youtube"></i> Watch on YouTube
+                            </a>
+                        </div>
+                        <div class="tutorial-card">
+                            <h4>Creative Card Making Ideas</h4>
+                            <p>Get inspired with innovative father's day gift card designs and techniques</p>
+                            <a href="https://www.youtube.com/results?search_query=fathers+day+handmade+cards+ideas" target="_blank" class="tutorial-link">
+                                <i class="fab fa-youtube"></i> Explore Ideas
+                            </a>
+                        </div>
+                        <div class="tutorial-card">
+                            <h4>Pop-up Cards Tutorial</h4>
+                            <p>Learn to make impressive 3D pop-up father's day cards that will wow dad</p>
+                            <a href="https://www.youtube.com/results?search_query=fathers+day+popup+cards+DIY" target="_blank" class="tutorial-link">
+                                <i class="fab fa-youtube"></i> Learn Techniques
+                            </a>
+                        </div>
+                        <div class="tutorial-card">
+                            <h4>Printable Templates</h4>
+                            <p>Free printable father's day card templates for quick and easy crafting</p>
+                            <a href="https://www.pinterest.com/search/pins/?q=fathers%20day%20card%20templates%20printable" target="_blank" class="tutorial-link">
+                                <i class="fab fa-pinterest"></i> Free Templates
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 食物建议板块 -->
+            <section id="food" class="section">
+                <h2><i class="fas fa-chef-hat"></i> Delicious Father's Day Food Ideas & Recipes</h2>
+                <div class="section-intro">
+                    <p>Show your love through food! These father's day gift ideas include special recipes and meal suggestions that will make dad's day extra delicious and memorable.</p>
+                </div>
+                <div class="food-categories">
+                    <div class="food-category">
+                        <h3>Breakfast Treats</h3>
+                        <div class="food-video-link">
+                            <a href="https://www.youtube.com/results?search_query=fathers+day+breakfast+recipes+ideas" target="_blank" class="video-link">
+                                <i class="fab fa-youtube"></i> Watch Father's Day Breakfast Recipe Videos
+                            </a>
+                        </div>
+                        <div class="food-items">
+                            <div class="food-item">
+                                <h4>Dad's Special Pancakes</h4>
+                                <p>Fluffy pancakes shaped like ties or mustaches</p>
+                                <ul>
+                                    <li>2 cups flour</li>
+                                    <li>2 eggs</li>
+                                    <li>1½ cups milk</li>
+                                    <li>Chocolate chips for decorating</li>
+                                </ul>
+                            </div>
+                            <div class="food-item">
+                                <h4>Champion's Breakfast</h4>
+                                <p>Hearty breakfast with bacon, eggs, and hash browns</p>
+                                <ul>
+                                    <li>Fresh eggs (sunny-side up)</li>
+                                    <li>Crispy bacon strips</li>
+                                    <li>Golden hash browns</li>
+                                    <li>Fresh orange juice</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="food-category">
+                        <h3>BBQ & Grilling</h3>
+                        <div class="food-video-link">
+                            <a href="https://www.youtube.com/results?search_query=fathers+day+BBQ+grilling+recipes" target="_blank" class="video-link">
+                                <i class="fab fa-youtube"></i> Explore Father's Day BBQ & Grilling Videos
+                            </a>
+                        </div>
+                        <div class="food-items">
+                            <div class="food-item">
+                                <h4>Classic BBQ Ribs</h4>
+                                <p>Slow-cooked ribs with homemade BBQ sauce</p>
+                                <ul>
+                                    <li>Baby back ribs</li>
+                                    <li>Brown sugar rub</li>
+                                    <li>Smoky BBQ sauce</li>
+                                    <li>Coleslaw on the side</li>
+                                </ul>
+                            </div>
+                            <div class="food-item">
+                                <h4>Gourmet Burgers</h4>
+                                <p>Build-your-own burger bar with premium toppings</p>
+                                <ul>
+                                    <li>Wagyu beef patties</li>
+                                    <li>Artisan buns</li>
+                                    <li>Gourmet cheese selection</li>
+                                    <li>Fresh vegetables & sauces</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="food-category">
+                        <h3>Sweet Treats</h3>
+                        <div class="food-video-link">
+                            <a href="https://www.youtube.com/results?search_query=fathers+day+dessert+cake+recipes" target="_blank" class="video-link">
+                                <i class="fab fa-youtube"></i> Discover Father's Day Sweet Treat Videos
+                            </a>
+                        </div>
+                        <div class="food-items">
+                            <div class="food-item">
+                                <h4>Dad's Favorite Cake</h4>
+                                <p>Chocolate cake with his favorite flavors</p>
+                                <ul>
+                                    <li>Rich chocolate sponge</li>
+                                    <li>Buttercream frosting</li>
+                                    <li>Personalized message</li>
+                                    <li>His favorite candy decoration</li>
+                                </ul>
+                            </div>
+                            <div class="food-item">
+                                <h4>Homemade Cookies</h4>
+                                <p>Fresh-baked cookies with a personal touch</p>
+                                <ul>
+                                    <li>Chocolate chip cookies</li>
+                                    <li>Oatmeal raisin</li>
+                                    <li>Sugar cookies (shape cutters)</li>
+                                    <li>Gift box packaging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 随机礼物建议板块 -->
+            <section id="gifts" class="section">
+                <h2><i class="fas fa-magic"></i> Father's Day Gift Ideas Generator</h2>
+                <div class="section-intro">
+                    <p>Struggling to find the perfect father's day gift? Our smart gift generator will help you discover amazing father's day gift ideas tailored to make your dad smile this happy father's day!</p>
+                </div>
+                <div class="gift-generator">
+                    <div class="generator-card">
+                        <h3>Not sure what to get?</h3>
+                        <p>Let our gift generator surprise you with the perfect idea!</p>
+                        <button class="btn-primary" onclick="generateRandomGift()">
+                            <i class="fas fa-dice"></i>
+                            Generate Random Gift Idea
+                        </button>
+                    </div>
+                    
+                    <div class="gift-result" id="giftResult">
+                        <div class="gift-placeholder">
+                            <i class="fas fa-gift-open"></i>
+                            <p>Click the button above to discover an amazing gift idea!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gift-categories">
+                    <h3>Browse by Category</h3>
+                    <div class="category-grid">
+                        <div class="category-card" onclick="generateCategoryGift('tech')">
+                            <i class="fas fa-laptop"></i>
+                            <h4>Tech & Gadgets</h4>
+                        </div>
+                        <div class="category-card" onclick="generateCategoryGift('hobby')">
+                            <i class="fas fa-tools"></i>
+                            <h4>Hobbies & Crafts</h4>
+                        </div>
+                        <div class="category-card" onclick="generateCategoryGift('clothing')">
+                            <i class="fas fa-tshirt"></i>
+                            <h4>Clothing & Style</h4>
+                        </div>
+                        <div class="category-card" onclick="generateCategoryGift('experience')">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Experiences</h4>
+                        </div>
+                        <div class="category-card" onclick="generateCategoryGift('books')">
+                            <i class="fas fa-book"></i>
+                            <h4>Books & Media</h4>
+                        </div>
+                        <div class="category-card" onclick="generateCategoryGift('sports')">
+                            <i class="fas fa-football-ball"></i>
+                            <h4>Sports & Fitness</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-heart"></i> Made with love for all the amazing dads out there</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
